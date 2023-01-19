@@ -1,0 +1,282 @@
+//====================================================================================================
+.footer {
+    // .footer__top
+
+    &__top {
+    }
+
+    // .footer__content
+
+    &__content {
+    }
+
+    // .footer__content-bottom
+
+    &__content-bottom {
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 700;
+        font-size: rem(12);
+        line-height: math.div(27, 12);
+        padding: rem(14) rem(0) rem(40);
+        @media (max-width: $mobile) {
+            padding: rem(15) 0;
+        }
+    }
+}
+.footer-top {
+    background-color: #e6f1fa;
+    // .footer-top__list
+
+    &__list {
+        padding: rem(35) 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        gap: rem(20);
+        @media (max-width: $mobile) {
+            padding: rem(15) 0;
+            justify-content: center;
+        }
+        @media (max-width:$mobileSmall){
+            display: grid;
+        }
+    }
+
+    // .footer-top__item
+
+    &__item {
+        font-size: rem(14);
+        line-height: math.div(21, 14);
+        padding-left: rem(40);
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            background-image: url("@img/icons/check.svg");
+            width: rem(16);
+            height: rem(12);
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+}
+.footer-content {
+    background-color: #000;
+    color: #fff;
+    text-transform: uppercase;
+    // .footer-content__inner
+
+    &__inner {
+        padding: rem(63) rem(0) rem(80);
+        border-bottom: rem(1) solid #4f4f4f;
+        @media (max-width: $mobile) {
+            padding: rem(30) 0;
+        }
+    }
+
+    // .footer-content__spollers
+
+    &__spollers {
+    }
+}
+.spollers {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    flex-wrap: wrap;
+    gap: rem(20);
+    @media (max-width:$mobileSmall){
+         gap: rem(14); 
+    }
+    // .spollers__item
+
+    &__item {
+        @media (max-width: $mobileSmall) {
+            flex: 1 1 100%;
+            border-bottom: rem(1) solid #fff;
+        }
+
+    }
+
+    // .spollers__logo
+
+    &__logo {
+    }
+
+    // .spollers__title
+
+    &__title {
+        line-height: math.div(27, 18);
+        font-weight: 600;
+        margin-bottom: rem(30);
+        text-transform: inherit;
+        cursor: default;
+        @media (max-width: $mobile) {
+            margin-bottom: rem(14);
+        }
+        @media (max-width: $mobileSmall) {
+            cursor: pointer;
+            width: 100%;
+            text-align: left;
+            font-weight: 500;
+        }
+    }
+
+    // .spollers__body
+
+    &__body {
+        @media (max-width: $mobileSmall) {
+            padding-bottom: rem(14);
+        }
+    }
+
+    //.spollers__social
+
+    &__social {
+        row-gap: rem(16);
+    }
+
+    // .spollers__body-link
+
+    &__body-link {
+        color: #828282;
+        font-weight: 500;
+        font-family: "Roboto";
+        font-size: rem(13);
+        line-height: math.div(23, 13);
+        transition: color 0.5s;
+        display: flex;
+        align-items: center;
+        column-gap: rem(20);
+        @media (any-hover: hover) {
+            &:hover {
+                color: #fff;
+            }
+        }
+        @media (max-width:$mobileSmall){
+             font-size: rem(14); 
+             max-width: 100%;
+        }
+    }
+
+    // .spollers__body-item
+
+    &__body-item {
+        & + .spollers__body-item {
+            margin-top: rem(5);
+        }
+    }
+
+    // .spollers__body-title
+
+    &__body-title {
+        font-weight: 500;
+        font-size: rem(12);
+        line-height: math.div(14, 12);
+        margin-bottom: rem(5);
+    }
+
+    //.spollers__body-social
+
+    &__body-social {
+    }
+
+    // .spollers__body-span
+
+    &__body-span {
+        font-size: rem(21);
+    }
+
+    // .spollers__join-content
+
+    &__join-content {
+        flex: 0 1 rem(280);
+        @media (max-width: em(850)) {
+            flex: 1 1 100%;
+        }
+    }
+}
+.join-content {
+    // .join-content__top
+
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: rem(20);
+        margin-bottom: rem(30);
+        @media (max-width: $mobile) {
+            margin-bottom: rem(15);
+        }
+    }
+    // .join-content__title
+
+    &__title {
+        line-height: math.div(27, 18);
+        font-weight: 600;
+        text-transform: inherit;
+    }
+
+    // .join-content__text
+
+    &__text {
+        color: #828282;
+        font-size: rem(13);
+        line-height: math.div(23, 13);
+        &:not(:last-child) {
+            margin-bottom: rem(10);
+        }
+    }
+
+    // .join-content__wrapper
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: rem(7);
+    }
+
+    // .join-content__input
+
+    &__input {
+        width: 100%;
+        background-color: transparent;
+        border: rem(1) solid #fff;
+        padding: rem(10) rem(15);
+        color: #fff;
+        font-family: "Roboto";
+        font-weight: 400;
+        font-size: 12px;
+        line-height: math.div(20, 12);
+
+        &::placeholder {
+            color: #fff;
+        }
+    }
+
+    // .join-content__button
+
+    &__button {
+        background-color: #fff;
+        font-size: rem(14);
+        line-height: math.div(20, 14);
+        padding: rem(9);
+        border: rem(1) solid #fff;
+        justify-content: center;
+        display: flex;
+        text-transform: uppercase;
+        transition: all 0.5s;
+        color: #3f3f3f;
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: transparent;
+                color: #fff;
+            }
+        }
+    }
+}
+
+//====================================================================================================

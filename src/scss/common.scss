@@ -1,0 +1,275 @@
+// Заголовки, общие БЄМ блоки и проче...
+
+.button {
+    text-transform: uppercase;
+    border: rem(1) solid #000;
+    padding: rem(14) rem(49);
+    background-color: transparent;
+    transition: all 0.5s;
+    display: inline-flex;
+    @media (any-hover: hover) {
+        &:hover {
+            background-color: #000;
+            color: #fff;
+        }
+    }
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 100%;
+    // .product__image-link
+
+    &__image-link {
+        flex: 0 1 auto;
+        display: block;
+        position: relative;
+        &:not(:last-child) {
+            margin-bottom: rem(14);
+        }
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    // .product__sale
+
+    &__sale {
+        position: absolute;
+        top: rem(15);
+        left: 0;
+        background-color: #000;
+        font-size: rem(14);
+        color: #fff;
+        padding: rem(5) rem(10);
+    }
+
+    // .product__content
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 100%;
+    }
+
+    // .product__category
+
+    &__category {
+        font-weight: 600;
+        font-size: rem(12);
+        line-height: math.div(18, 12);
+        text-transform: uppercase;
+        color: #c4c4c4;
+        @media (max-width: $mobileSmall) {
+            font-size: rem(10);
+            line-height: math.div(14, 10);
+        }
+    }
+
+    // .product__text
+
+    &__text {
+        flex: 1 1 100%;
+        font-weight: 300;
+        &:not(:last-child) {
+            margin-bottom: rem(14);
+        }
+        @media (max-width: $mobileSmall) {
+            font-size: rem(12);
+            line-height: math.div(18, 12);
+            &:not(:last-child) {
+                margin-bottom: rem(4);
+            }
+        }
+    }
+
+    // .product__prise
+
+    &__prise {
+    }
+}
+.product-prise {
+    display: flex;
+    align-items: center;
+    gap: rem(10);
+    // .product-prise__current
+
+    &__current {
+        font-weight: 500;
+        font-size: rem(22);
+        line-height: math.div(33, 22);
+        @media (max-width: $mobileSmall) {
+            font-size: rem(14);
+            line-height: math.div(21, 14);
+        }
+    }
+
+    // .product-prise__sale
+
+    &__sale {
+        color: $red;
+    }
+
+    // .product-prise__old
+
+    &__old {
+        color: #828282;
+        font-size: rem(14);
+        line-height: math.div(21, 14);
+        @media (max-width: $mobileSmall) {
+            font-size: rem(8);
+            line-height: math.div(12, 8);
+        }
+    }
+}
+.link-more {
+    font-weight: 500;
+    font-size: rem(14);
+    line-height: math.div(21, 14);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: #828282;
+    padding: rem(13) rem(48);
+    border: rem(2) solid #828282;
+    transition: all 0.5s;
+    @media (any-hover: hover) {
+        &:hover {
+            border: rem(2) solid #000;
+            color: #000;
+        }
+    }
+}
+
+.checkbox {
+    // .checkbox__input
+
+    &__input {
+    }
+
+    // .checkbox__label
+
+    &__label {
+    }
+
+    // .checkbox__text
+
+    &__text {
+    }
+}
+
+.content-box {
+    // .content-box__title
+
+    &__title {
+        font-weight: 500;
+        font-size: rem(56);
+        display: inline-block;
+        line-height: math.div(76, 56);
+        position: relative;
+        text-transform: uppercase;
+        padding: rem(19) rem(56) 0 0;
+        &:not(:last-child) {
+            margin-bottom: rem(14);
+        }
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            height: rem(2);
+            background-color: #000;
+        }
+        &::before {
+            content: "";
+            right: 0;
+            width: 95%;
+            top: 0;
+        }
+        &::after {
+            content: "";
+            transform: rotate(90deg);
+            right: -49px;
+            top: 50px;
+            width: 100px;
+        }
+        @media (max-width: em(1200)) {
+            font-size: rem(42);
+            line-height: math.div(56, 42);
+            padding: rem(15) rem(15) 0 0;
+            &::after {
+                top: 29px;
+                right: -31px;
+                width: 60px;
+            }
+        }
+        @media (max-width: $tablet) {
+            font-size: rem(30);
+            line-height: math.div(42, 30);
+        }
+        @media (max-width: $mobile) {
+            font-size: rem(26);
+            line-height: math.div(32, 26);
+            &::after {
+                top: 19px;
+                right: -20px;
+                width: 40px;
+            }
+        }
+        @media (max-width: em(600)) {
+            font-size: rem(18);
+            line-height: math.div(24, 18);
+            &:not(:last-child) {
+                margin-bottom: rem(4);
+            }
+        }
+        @media (max-width: $mobileSmall) {
+            font-size: rem(14);
+            padding: 0;
+            line-height: math.div(19, 14);
+            &::before,
+            &::after {
+                content: "";
+                display: none;
+            }
+        }
+    }
+
+    // .content-box__text
+
+    &__text {
+        font-size: rem(25);
+        font-family: "Roboto";
+        font-weight: 300;
+        line-height: math.div(37, 25);
+        letter-spacing: 0.01em;
+        &:not(:last-child) {
+            margin-bottom: rem(24);
+        }
+        @media (max-width: em(1200)) {
+            font-size: rem(18);
+            line-height: math.div(24, 18);
+        }
+        @media (max-width: $tablet) {
+            font-size: rem(14);
+            line-height: math.div(18, 14);
+        }
+        @media (max-width: em(600)) {
+            font-size: rem(10);
+            line-height: math.div(14, 10);
+            &:not(:last-child) {
+                margin-bottom: rem(8);
+            }
+        }
+    }
+
+    // .content-box__button
+
+    &__button {
+        @media (max-width: em(600)) {
+            font-size: 0.625rem;
+            line-height: 1.5;
+            padding: 0.5rem 1.0625rem;
+        }
+    }
+}
